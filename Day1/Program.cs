@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.Net.Sockets;
 
 namespace Day1
 {
@@ -7,6 +8,17 @@ namespace Day1
         static ConcurrentQueue<int> numbers = new ConcurrentQueue<int>();
         static ManualResetEventSlim addedNumber = new ManualResetEventSlim();
         static CancellationTokenSource tokenSource = new CancellationTokenSource();
+        static string[] numberStrs = new[] {
+            "one",
+            "two",
+            "three",
+            "four",
+            "five",
+            "six",
+            "seven",
+            "eight",
+            "nine",
+        };
 
         static void Main(string[] args)
         {
@@ -51,26 +63,52 @@ namespace Day1
         public static void GetNumberOfLine(object? param)
         {
             string line = (string)(param ?? throw new ArgumentNullException(nameof(param)));
-            int result = 0;
+            int firstDigitIndex = line.Length;
+            int lastDigitIndex = 0;
+            int firstDigit = 0;
+            int lastDigit = 0;
+
+            for (int i = 0; i < numberStrs.Length; i++)
+            {
+                int index = line.IndexOf(numberStrs[i]);
+                if (index != -1 && index < firstDigitIndex)
+                {
+                    firstDigitIndex = index;
+                    firstDigit = i + 1;
+                }
+            }
+
+            for (int i = 0; i < numberStrs.Length; i++)
+            {
+                int index = line.LastIndexOf(numberStrs[i]);
+                if (index != -1 && index > lastDigitIndex)
+                {
+                    lastDigitIndex = index;
+                    lastDigit = i + 1;
+                }
+            }
+
+
             char[] chars = line.ToCharArray();
-            for (int i = 0; i < chars.Length; i++)
+            for (int i = 0; i < firstDigitIndex; i++)
             {
                 if (chars[i] > 47 && chars[i] < 58)
                 {
-                    result = (chars[i] - 48) * 10;
+                    firstDigit = chars[i] - 48;
                     break;
                 }
             }
 
-            for (int i = chars.Length - 1; i >= 0; i--)
+            for (int i = chars.Length - 1; i >= lastDigitIndex; i--)
             {
                 if (chars[i] > 47 && chars[i] < 58)
                 {
-                    result += chars[i] - 48;
+                    lastDigit = chars[i] - 48;
                     break;
                 }
             }
-            numbers.Enqueue(result);
+
+            numbers.Enqueue(firstDigit * 10 + lastDigit);
             addedNumber.Set();
         }
     }
