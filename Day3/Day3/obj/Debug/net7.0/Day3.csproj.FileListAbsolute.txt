@@ -1,0 +1,17 @@
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\bin\Debug\net7.0\Day3.exe
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\bin\Debug\net7.0\input.txt
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\bin\Debug\net7.0\Day3.deps.json
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\bin\Debug\net7.0\Day3.runtimeconfig.json
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\bin\Debug\net7.0\Day3.dll
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\bin\Debug\net7.0\Day3.pdb
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.csproj.AssemblyReference.cache
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.AssemblyInfoInputs.cache
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.AssemblyInfo.cs
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.dll
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\refint\Day3.dll
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.pdb
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\Day3.genruntimeconfig.cache
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\obj\Debug\net7.0\ref\Day3.dll
+C:\Users\Fabian\source\repos\AdventOfCode\Day3\Day3\bin\Debug\net7.0\input2.txt
